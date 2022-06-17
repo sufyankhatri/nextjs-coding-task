@@ -1,27 +1,5 @@
-import { Button } from '../components';
 import styled from 'styled-components';
-
-const Cover = () => {
-  return (
-    <MainContainer className="main">
-      <InnerContainer>
-        <InfoContainer>
-          <h1>Future-proof your business. WiFi 6E is here.</h1>
-          <p>
-            Offer your customers the fastest performance
-            <br /> possible with Plume. They’re ready.
-          </p>
-          <Button primary size="large">
-            Learn more about WiFi 6E
-          </Button>
-        </InfoContainer>
-        <ImageContainer />
-      </InnerContainer>
-    </MainContainer>
-  );
-};
-
-const MainContainer = styled.div`
+export const MainContainer = styled.div`
   width: 100%;
   height: 800px;
   background: black;
@@ -30,8 +8,7 @@ const MainContainer = styled.div`
   justify-content: center;
   color: white;
 `;
-
-const InnerContainer = styled.div`
+export const InnerContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -45,7 +22,7 @@ const InnerContainer = styled.div`
   }
 `;
 
-const InfoContainer = styled.div`
+export const InfoContainer = styled.div`
   flex: 1 1 35%;
   font-family: '-OC Rey';
   h1 {
@@ -71,7 +48,7 @@ const InfoContainer = styled.div`
     padding: 10px 32px;
   }
 `;
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
   flex: 1 1 100%;
   text-align: center;
   background-image: url('/mobile-image.png');
@@ -85,5 +62,3 @@ const ImageContainer = styled.div`
     flex: 1 1 50%;
   }
 `;
-
-export default Cover;

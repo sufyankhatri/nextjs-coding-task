@@ -1,23 +1,13 @@
-import { Button } from "../components";
-import styled from "styled-components";
+import { Button } from '../components';
+import styled from 'styled-components';
 
 export default function Home() {
   return (
-    <MainContainer className="main">
-      <InnerContainer>
-        <InfoContainer>
-          <h1>Future-proof your business. WiFi 6E is here.</h1>
-          <p>
-            Offer your customers the fastest performance
-            <br /> possible with Plume. They’re ready.
-          </p>
-          <Button primary size="large">
-            Learn more about WiFi 6E
-          </Button>
-        </InfoContainer>
-        <ImageContainer />
-      </InnerContainer>
-    </MainContainer>
+    <div className="main">
+      <Button primary size="large">
+        Click Me
+      </Button>
+    </div>
   );
 }
 
@@ -47,7 +37,7 @@ const InnerContainer = styled.div`
 
 const InfoContainer = styled.div`
   flex: 1 1 35%;
-  font-family: "-OC Rey";
+  font-family: '-OC Rey';
   h1 {
     font-weight: 400;
     font-size: 72px;
@@ -57,7 +47,7 @@ const InfoContainer = styled.div`
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
-    font-family: "Wigrum";
+    font-family: 'Wigrum';
   }
   button {
     width: 286px;
@@ -65,7 +55,7 @@ const InfoContainer = styled.div`
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    font-family: "Wigrum";
+    font-family: 'Wigrum';
     border-radius: 135px;
     background: #656cff;
     padding: 10px 32px;
@@ -74,7 +64,7 @@ const InfoContainer = styled.div`
 const ImageContainer = styled.div`
   flex: 1 1 100%;
   text-align: center;
-  background-image: url("/mobile-image.png");
+  background-image: url('/mobile-image.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -82,6 +72,6 @@ const ImageContainer = styled.div`
   order: 1;
   @media (min-width: 980px) {
     height: 100%;
-    flex: 1 1 50%
+    flex: 1 1 50%;
   }
 `;
