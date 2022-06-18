@@ -1,27 +1,27 @@
 module.exports = {
   stories: [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
+    '../stories/**/*.stories.mdx',
+    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
     //added for sass
-    "@storybook/preset-scss",
+    '@storybook/preset-scss',
     //added for A11Y
-    "@storybook/addon-a11y",
+    '@storybook/addon-a11y',
   ],
 
   // added for svgr with webpack
-  webpackFinal: (config) => {
+  webpackFinal: config => {
     const fileLoaderRule = config.module.rules.find(
-      (rule) => rule.test && rule.test.test(".svg")
+      rule => rule.test && rule.test.test('.svg')
     );
     fileLoaderRule.exclude = /\.svg$/;
     config.module.rules.push({
       test: /\.svg$/,
-      enforce: "pre",
-      loader: require.resolve("@svgr/webpack"),
+      enforce: 'pre',
+      loader: require.resolve('@svgr/webpack'),
     });
 
     return config;
