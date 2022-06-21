@@ -3,8 +3,11 @@ const path = require("path");
 const withPlugins = require("next-compose-plugins");
 const withPWA = require("next-pwa");
 const withSvgr = require("next-svgr");
+const withImages = require("next-images");
 
 const isDev = process.env.NODE_ENV !== "production";
+
+module.exports = withImages();
 
 module.exports = withPlugins([
   withSvgr({
